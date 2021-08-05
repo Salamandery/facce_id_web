@@ -42,13 +42,13 @@ const SignIn = () => {
           <img />
         </Logo>
         <span id="title">FACCE_ID</span>
-        <span id="subtitle">SISTEMA DE RECONHECIMENTO FACIAL</span>
+        <span id="subtitle">Sistema de Reconhecimento Facial</span>
         <Form ref={formRef} onSubmit={handlerLogin}>
           <FormWrapper w="100%">
             <span>Usuário:</span>
             <Input
               name="login"
-              placeholder="Login"
+              placeholder="Usuário"
             />
           </FormWrapper>
           <FormWrapper>
@@ -59,7 +59,7 @@ const SignIn = () => {
               placeholder="Senha"
             />
           </FormWrapper>
-          <Wrapper 
+          <Wrapper
             w="100%"
             direction="column"
             content="space-between"

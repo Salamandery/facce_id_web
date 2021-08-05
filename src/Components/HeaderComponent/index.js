@@ -22,8 +22,7 @@ import { signOutRequest } from '../../Services/store/auth/action';
 const Header = ({ title, Ico, buttonBack }) => {
   const dispatch = useDispatch();
   const version = process.env.REACT_APP_VERSION;
-  const user = useSelector((state) => state.user.user);
-  const empresa = useSelector((state) => state.user.company);
+  const user = useSelector((state) => console.log(state.user));
 
   const checkToken = useCallback(async () => {
     try {
@@ -52,7 +51,7 @@ const Header = ({ title, Ico, buttonBack }) => {
   }, [checkToken]);
 
   return (
-    <Container bgColor="#003d99" txtColor="#fff">
+    <Container bgColor="#333" txtColor="#fff">
       <Intranet>
         <Ico style={{ marginRight: 10 }} />
         {title}
@@ -70,13 +69,13 @@ const Header = ({ title, Ico, buttonBack }) => {
       </Intranet>
       <User>
         <SystemInfo>
-          <span>EMPRESA: {empresa.descricao}</span>
+          <span>FACCE_ID</span>
           <VersionNumber>
             Ver. {version} <i>Beta</i>
           </VersionNumber>
         </SystemInfo>
         <UserInfo>
-          <Username>{user.nome.toUpperCase()}</Username>
+          <Username>{}</Username>
           <ButtonPerfil onClick={(e) => handlerNavigate('/Perfil')}>
             Editar Perfil
           </ButtonPerfil>

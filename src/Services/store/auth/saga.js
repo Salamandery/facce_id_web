@@ -8,11 +8,10 @@ import api from '../../api';
 
 export function* signIn({ payload }) {
   try {
-    const { login, password, company } = payload;
-    const res = yield call(api.post, 'session', {
+    const { login, password } = payload;
+    const res = yield call(api.post, 'auth', {
       login,
-      password,
-      company,
+      password
     });
 
     const { token } = res.data;
@@ -21,12 +20,8 @@ export function* signIn({ payload }) {
       const userConfig = res.data;
       api.defaults.headers.authorization = `Bearer ${token}`;
 
-      const menuConfig = res.data.user?.menuConfig;
-      const formConfig = res.data.user?.formConfig;
-      const oficinaConfig = res.data.user?.oficinaConfig;
-
       yield put(
-        signSuccess(token, userConfig, menuConfig, formConfig, oficinaConfig)
+        signSuccess(token, userConfig)
       );
 
       setTimeout(() => {
@@ -44,26 +39,17 @@ export function* signIn({ payload }) {
 
 export function* signUp({ payload }) {
   try {
-    const { nome, login, email, password, empresaId } = payload;
+    const { nome, login, email, password } = payload;
 
     const res = yield call(api.post, 'usuario', {
       nome,
       login: login.toLowerCase(),
       email: email.toLowerCase(),
       password,
-      empresaId,
       ativo: false,
     });
 
     if (MessageHandling(res)) {
-      yield call(api.post, 'services', {
-        titulo: `USUÁRIO CRIADO ${login.toLowerCase()} - NECESSITA DE ATENÇÃO`,
-        descricao: `USUÁRIO: ${login.toLowerCase()} foi criado, status: inativo, necessário configuração e liberação`,
-        setor_id: 1,
-        localidade_id: 108,
-        provedor: false,
-        oficina_id: 1,
-      });
 
       history.push('/');
 

@@ -22,15 +22,7 @@ const Portal = ({
 
   return (
     <Container>
-      {noHeader === false ? (
-        <Wrapper>
-          <ButtomMenu onClick={(e) => handlerHome()}>
-            <FaHome />
-          </ButtomMenu>
-          <Header title={title} Ico={Ico} buttonBack={buttonBack} />
-        </Wrapper>
-      ) : null}
-      <Wrapper w="100%" h="100%" margin="0" pad="0" bgColor="#f2f6ff">
+      <Wrapper w="100%" h="100%" margin="0" pad="0" bgColor="#222">
         {noHeader === false ? (
           <>
             <MenuBar />
@@ -38,6 +30,11 @@ const Portal = ({
               {isTitleControlled ? (
                 //<InfoController title={title} Ico={Ico} buttonBack={buttonBack} />
                 <></>
+              ) : null}
+              {noHeader === false ? (
+                <Wrapper w="100%">
+                  <Header title={title} Ico={Ico} buttonBack={buttonBack} />
+                </Wrapper>
               ) : null}
               {children}
             </Content>

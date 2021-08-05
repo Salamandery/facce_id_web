@@ -17,6 +17,20 @@ export const Wrapper = styled.div`
   margin: ${(props) => props.margin};
   background-color: ${(props) => props.bgColor};
 `;
+export const Logo = styled.div`
+  display: flex;
+  height: 20%;
+  width: 100%;
+  padding: 20px;
+  margin: 30px 0;
+
+  > img {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #c1b2b2;
+  }
+`;
 export const Content = styled.div`
   display: flex;
   width: 100%;
@@ -33,24 +47,17 @@ export const Content = styled.div`
   transition: all 1s ease;
 `;
 export const MenuBar = styled.div`
-  width: ${(props) => (props.status === true ? '10%' : '3%')};
-  background-color: #003d99;
-  overflow: hidden;
-
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: width 0.5s ease;
+  background-color: #333;
+  overflow: auto;
 
   @media (max-width: 1600px) {
-    width: ${(props) => (props.status === true ? '20%' : '3.5%')};
+    width: 20%;
   }
   @media (max-width: 1360px) {
-    width: ${(props) => (props.status === true ? '20%' : '4.2%')};
+    width: 20%;
   }
   @media (max-width: 1200px) {
-    width: ${(props) => (props.status === true ? '20%' : '4.8%')};
+    width: 20%;
   }
   @media (max-width: 650px) {
     width: 0;
@@ -61,7 +68,7 @@ export const ButtomMenu = styled.button`
   text-align: center;
   color: #e6e6e6;
   font-size: 24px;
-  background: #003380;
+  background: #333;
   border: 0;
 
   &:hover {
@@ -79,9 +86,10 @@ export const LabelMenu = styled.div`
   padding: 5px 10px;
 `;
 export const ItemMenu = styled.button`
-  justify-content: baseline;
-  align-self: stretch;
-  font-size: 26px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
   text-align: left;
   padding: 2px 5px;
   border: 0;
@@ -91,6 +99,10 @@ export const ItemMenu = styled.button`
   &:hover {
     opacity: 0.7;
     color: '#fff';
+  }
+
+  > span {
+    margin-left: 10px;
   }
 `;
 export const GroupLabel = styled.div`

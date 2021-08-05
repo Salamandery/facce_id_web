@@ -39,7 +39,6 @@ export const Container = styled.div`
     background: transparent;
     border: 0;
     color: #333;
-    text-transform: uppercase;
 
     &::placeholder {
       color: #666360;

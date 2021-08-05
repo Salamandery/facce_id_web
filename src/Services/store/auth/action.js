@@ -1,14 +1,14 @@
-export function signInRequest(login, password, company) {
+export function signInRequest(login, password) {
   return {
     type: '@auth/SIGN_IN_REQUEST',
-    payload: { login, password, company },
+    payload: { login, password },
   };
 }
 
-export function signSuccess(token, user, menu, forms, oficinas) {
+export function signSuccess(token, user) {
   return {
     type: '@auth/SIGN_IN_SUCCESS',
-    payload: { token, user, menu, forms, oficinas },
+    payload: { token, user },
   };
 }
 
@@ -18,10 +18,10 @@ export function signFailure() {
   };
 }
 
-export function signUpRequest(nome, login, email, password, company) {
+export function signUpRequest(nome, login, email, password) {
   return {
     type: '@auth/SIGN_UP_REQUEST',
-    payload: { nome, login, email, password, company },
+    payload: { nome, login, email, password },
   };
 }
 export function signOutRequest() {

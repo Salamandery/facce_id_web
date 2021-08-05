@@ -23,20 +23,20 @@ export const LoginForm = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+
   > span {
     align-self: center;
     color: #333;
     font-family: sans-serif;
   }
-  
+
   #title {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     margin-top: 70px;
   }
-  
+
   #subtitle {
     text-align: center;
     width: 200px;
@@ -76,7 +76,7 @@ export const Login = styled.button`
   padding: 8px 35px;
   color: #fff;
   font-weight: bold;
-  
+
   &:hover {
     background: #002699;
     color: #fff;
@@ -89,7 +89,6 @@ export const FormWrapper = styled(Wrapper)`
   span {
     color: #999;
     margin-bottom: 5px;
-    text-transform: uppercase;
   }
 `;
 

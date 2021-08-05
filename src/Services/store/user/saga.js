@@ -9,9 +9,6 @@ export function* updateProfile({ payload }) {
       name,
       login,
       email,
-      wd = 0,
-      company,
-      provedor,
       ...rest
     } = payload.data;
 
@@ -19,15 +16,13 @@ export function* updateProfile({ payload }) {
       nome: name,
       login: login.toLowerCase(),
       email: email.toLowerCase(),
-      oficina_default: wd,
-      provedor,
       ...(rest.oldPassword ? rest : {}),
     };
 
     const res = yield call(api.put, 'usuario', profile);
 
     if (MessageHandling(res, true)) {
-      yield put(updateProfileSuccess({ profile: res.data.data, company }));
+      yield put(updateProfileSuccess({ profile: res.data.data }));
     }
   } catch (err) {
     yield put(updateProfileFailure());
