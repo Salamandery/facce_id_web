@@ -36,15 +36,9 @@ export const Content = styled.div`
   width: 100%;
   align-self: stretch;
   overflow: auto;
-  padding: ${(props) => (props.pad ? '0' : '0 10px')};
+  padding: ${(props) => (props.pad ? '0' : '0 0')};
   flex-direction: column;
   height: 100%;
-
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
 `;
 export const MenuBar = styled.div`
   background-color: #333;
@@ -108,10 +102,4 @@ export const ItemMenu = styled.button`
 export const GroupLabel = styled.div`
   flex-direction: column;
   align-self: stretch;
-
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: height 0.5s ease;
 `;

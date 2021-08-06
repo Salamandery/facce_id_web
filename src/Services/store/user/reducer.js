@@ -14,7 +14,7 @@ export default function user(state = INITIAL_STATE, action) {
         break;
       }
       case '@auth/SIGN_IN_SUCCESS': {
-        draft.user = action.payload.user.user;
+        draft.user = action.payload.user;
         break;
       }
       case '@auth/SIGN_OUT_REQUEST': {

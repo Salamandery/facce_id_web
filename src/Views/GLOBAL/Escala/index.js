@@ -1,14 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import MessageHandling from '../../../../Util/MessageHandling';
+import MessageHandling from '../../../Util/MessageHandling';
 import { useSelector } from "react-redux";
-import axios from '../../../../Services/api';
+import axios from '../../../Services/api';
 import { FaCalendar, FaCheck, FaPen, FaSearch, FaUserClock, FaUserPlus } from 'react-icons/fa';
-import { ButtonDefault, CardBlock, Container, Wrapper, FieldSet, Input, MaskInput, Table } from '../../../../Style';
-import Modal from '../../../../Components/ModalController';
-import { MaskCPF, MaskRG, MaskCNS } from '../../../../Util/FormatMask';
-import CalendarSchendule from '../../../../Components/CalendarSchendule';
+import { ButtonDefault, CardBlock, Container, Wrapper, FieldSet, Input, MaskInput, Table } from '../../../Style';
+import Modal from '../../../Components/ModalController';
+import { MaskCPF, MaskRG, MaskCNS } from '../../../Util/FormatMask';
+import CalendarSchendule from '../../../Components/CalendarSchendule';
 
-const PresencaMedica = () => {
+const Escala = () => {
   const selectedDay = useSelector((state) => state.calendar.day);
   const selectedMonth = useSelector((state) => state.calendar.month);
   const selectedYear = useSelector((state) => state.calendar.year);
@@ -365,4 +365,4 @@ const PresencaMedica = () => {
   );
 }
 
-export default PresencaMedica;
+export default Escala;

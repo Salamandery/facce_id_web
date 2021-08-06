@@ -26,6 +26,10 @@ function Router({
     return <Redirect to="/" />;
   }
 
+  if (signed && rest.path === '/') {
+    return <Redirect to="/Home" />;
+  }
+
   const Layout = signed ? Portal : Default;
 
   return (

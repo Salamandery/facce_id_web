@@ -1,7 +1,5 @@
-import React, { useMemo } from 'react';
-import { useSelector } from 'react-redux';
-import { FaThermometer, FaStethoscope } from 'react-icons/fa';
-import { MdAddBox, MdBuild, MdSettings } from 'react-icons/md';
+import React from 'react';
+import { FaUserPlus, FaRegFileAlt, FaRegCalendarAlt } from 'react-icons/fa';
 import history from '../../../Services/history';
 import { MenuBar, LabelMenu, GroupLabel, ItemMenu, Logo, Wrapper } from './style';
 
@@ -20,20 +18,26 @@ export default function Menu() {
       <GroupLabel>
         <LabelMenu>
           <ItemMenu
-            onClick={(e) => handlerItem('/ProntuarioEletronico')}
+            onClick={(e) => handlerItem('/Prestadores')}
           >
-            <FaStethoscope />
-            <span>Teste</span>
+            <FaUserPlus />
+            <span>Prestadores</span>
           </ItemMenu>
         </LabelMenu>
         <LabelMenu>
           <ItemMenu
-            onClick={(e) => handlerItem('/ProntuarioEletronico')}
+            onClick={(e) => handlerItem('/Escala')}
           >
-            <FaStethoscope />
-            {
-              // fActive? <FaCaretRight className="icon" /> : null
-            }
+            <FaRegCalendarAlt />
+            <span>Escala</span>
+          </ItemMenu>
+        </LabelMenu>
+        <LabelMenu>
+          <ItemMenu
+            onClick={(e) => handlerItem('/Relatorios')}
+          >
+            <FaRegFileAlt />
+            <span>Relatórios</span>
           </ItemMenu>
         </LabelMenu>
       </GroupLabel>

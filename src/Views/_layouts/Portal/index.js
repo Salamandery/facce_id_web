@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaHome } from 'react-icons/fa';
 import ProtoTypes from 'prop-types';
 import history from '../../../Services/history';
 import { Container, Content, Wrapper, ButtomMenu } from './style';
@@ -21,12 +20,12 @@ const Portal = ({
   }
 
   return (
-    <Container>
+    <Container w="100%">
       <Wrapper w="100%" h="100%" margin="0" pad="0" bgColor="#222">
         {noHeader === false ? (
           <>
             <MenuBar />
-            <Content pad={isPanel}>
+            <Content w="100%" pad={isPanel}>
               {isTitleControlled ? (
                 //<InfoController title={title} Ico={Ico} buttonBack={buttonBack} />
                 <></>

@@ -17,7 +17,7 @@ export function* signIn({ payload }) {
     const { token } = res.data;
 
     if (MessageHandling(res, true)) {
-      const userConfig = res.data;
+      const userConfig = res.data.data;
       api.defaults.headers.authorization = `Bearer ${token}`;
 
       yield put(

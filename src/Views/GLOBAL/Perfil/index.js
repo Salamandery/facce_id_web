@@ -7,17 +7,13 @@ import { Form, Container } from '../../../Style';
 
 const Perfil = () => {
   const dispatch = useDispatch();
-  const company = useSelector((state) => state.user.company);
-  const profile = useSelector((state) => state.user.user);
+  const profile = useSelector((state) => state.user);
 
-  const [login, setLogin] = useState(profile.login ? profile.login : '');
+  const [login, setLogin] = useState(profile.CNPJ ? profile.CNPJ : '');
   const [assinatura, setAssinatura] = useState(
     profile.assinatura !== 'null' ? profile.assinatura : ''
   );
   const [name, setName] = useState(profile.nome ? profile.nome : '');
-  const [wd, setWd] = useState(
-    profile.oficina_default ? profile.oficina_default : 0
-  );
   const [email, setEmail] = useState(profile.email ? profile.email : '');
   const [password, setPass] = useState('');
   const [oldPassword, setOldPass] = useState('');
@@ -30,13 +26,11 @@ const Perfil = () => {
           login,
           name,
           email,
-          wd,
           assinatura,
           password,
           oldPassword,
           confirmPassword,
           provedor: profile.provedor,
-          company,
         })
       );
     },
@@ -44,12 +38,10 @@ const Perfil = () => {
       login,
       name,
       email,
-      wd,
       assinatura,
       password,
       oldPassword,
       confirmPassword,
-      company,
       dispatch,
       updateProfileRequest,
     ]
@@ -81,11 +73,6 @@ const Perfil = () => {
         />
         {profile.provedor ? (
           <>
-            <FormInput
-              placeholder="OFICINA PADRÃO"
-              value={wd}
-              onChange={(e) => setWd(e.target.value)}
-            />
             <FormInput
               placeholder="ASSINATURA"
               value={assinatura}

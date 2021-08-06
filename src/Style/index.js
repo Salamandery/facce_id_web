@@ -26,12 +26,12 @@ export const CardBlock = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction};
   flex-wrap: ${(props) => (props.wrap ? 'wrap' : null)};
-  background: ${(props) => props.bgColor || '#fff'};
-  margin: ${(props) => props.margin || '10px auto'};
+  background: ${(props) => props.bgColor || '#333'};
+  margin: ${(props) => props.margin || 'auto 0'};
   width: ${(props) => props.w};
   height: ${(props) => props.h};
   ${(props) => (props.overflow ? `overflow: ${props.overflow};` : null)};
-  box-shadow: 0px 0px 10px 0.5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0.5px rgba(12, 12, 12, 0.1);
 `;
 export const CardButton = styled.div`
   display: flex;
@@ -39,7 +39,7 @@ export const CardButton = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: ${(props) => props.bgColor || '#fff'};
+  background: ${(props) => props.bgColor || '#333'};
   height: ${(props) =>
     props.size === 'small'
       ? '50px'
@@ -123,7 +123,7 @@ export const Container = styled.div`
   flex-wrap: ${(props) => (props.wrap ? 'wrap' : null)};
   margin: ${(props) => props.margin || 0};
   margin-right: ${(props) => props.marginRight || 0};
-  background: ${(props) => props.bgColor || null};
+  background: ${(props) => props.bgColor || '#222'};
   padding: ${(props) => props.pad || 0};
   align-self: ${(props) => props.self};
   align-items: ${(props) => props.items};
