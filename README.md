@@ -1,12 +1,12 @@
-# 🌐 URLContainer
+# 🥸 FACCE_ID Web
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Next.js-11.1.2-black?style=for-the-badge&logo=next.js"/>
-  <img src="https://img.shields.io/badge/React-17.0.2-61DAFB?style=for-the-badge&logo=react"/>
-  <img src="https://img.shields.io/badge/TypeScript-4.4.3-3178C6?style=for-the-badge&logo=typescript"/>
-  <img src="https://img.shields.io/badge/MUI-5.0.3-007FFF?style=for-the-badge&logo=mui"/>
-  <img src="https://img.shields.io/badge/styled--components-5.3.1-DB7093?style=for-the-badge&logo=styled-components"/>
-  <img src="https://img.shields.io/badge/Axios-0.22.0-5A29E4?style=for-the-badge&logo=axios"/>
+  <img src="https://img.shields.io/badge/React-16.13.1-61DAFB?style=for-the-badge&logo=react"/>
+  <img src="https://img.shields.io/badge/Redux-4.0.5-764ABC?style=for-the-badge&logo=redux"/>
+  <img src="https://img.shields.io/badge/Redux--Saga-1.1.3-999999?style=for-the-badge&logo=redux-saga"/>
+  <img src="https://img.shields.io/badge/Styled--Components-5.1.0-DB7093?style=for-the-badge&logo=styled-components"/>
+  <img src="https://img.shields.io/badge/Axios-0.19.2-5A29E4?style=for-the-badge&logo=axios"/>
+  <img src="https://img.shields.io/badge/Socket.io-2.3.0-010101?style=for-the-badge&logo=socket.io"/>
 </p>
 
 <div align="center">
@@ -27,39 +27,59 @@
 ## Sobre o Projeto | About
 
 **PT-BR:**
-> Um container Electron que abre uma URL em modo quiosque (fullscreen, sem bordas, sem menu), lendo o endereço do arquivo `C:\temp\url.txt`. Ideal para aplicações de totens, painéis ou navegação restrita.
+> Sistema web para reconhecimento facial, agendamento de escala, relatórios e gestão de usuários/prestadores. Permite login, cadastro, controle de agenda, geração de relatórios e integração com serviços em tempo real.
 
 **EN:**
-> An Electron container that opens a URL in kiosk mode (fullscreen, borderless, no menu), reading the address from the file `C:\temp\url.txt`. Ideal for kiosk, dashboard, or restricted browsing applications.
+> Web system for facial recognition, schedule management, reporting, and user/provider management. Features login, registration, schedule control, report generation, and real-time service integration.
 
 ---
 
 ## 🚀 Tecnologias | Technologies
 
 **PT-BR:**
-- **Este projeto não utiliza Java.**
-- **Electron 15+**: Framework para criar aplicações desktop multiplataforma usando tecnologias web (HTML, CSS, JS).
-- **Node.js 16+**: Ambiente de execução JavaScript para backend e integração com o sistema operacional.
-- **Electron Forge**: Ferramenta para empacotamento, distribuição e scaffolding de projetos Electron.
+- **React 16.13+**: Biblioteca para construção de interfaces de usuário.
+- **Redux & Redux-Saga**: Gerenciamento de estado global e efeitos assíncronos.
+- **Styled-components**: Estilização de componentes com CSS-in-JS.
+- **React Router DOM**: Roteamento SPA.
+- **Axios**: Requisições HTTP.
+- **Socket.io-client**: Comunicação em tempo real.
+- **Unform & Yup**: Formulários e validação.
+- **@react-pdf/renderer**: Geração de PDFs.
+- **Outros**: Immer, date-fns, moment, react-dropzone, xlsx, etc.
 
 **EN:**
-- **This project does not use Java.**
-- **Electron 15+**: Framework for building cross-platform desktop applications using web technologies (HTML, CSS, JS).
-- **Node.js 16+**: JavaScript runtime environment for backend and OS integration.
-- **Electron Forge**: Tool for packaging, distribution, and scaffolding of Electron projects.
+- **React 16.13+**: UI library for building user interfaces.
+- **Redux & Redux-Saga**: Global state management and async effects.
+- **Styled-components**: CSS-in-JS styling.
+- **React Router DOM**: SPA routing.
+- **Axios**: HTTP requests.
+- **Socket.io-client**: Real-time communication.
+- **Unform & Yup**: Forms and validation.
+- **@react-pdf/renderer**: PDF generation.
+- **Others**: Immer, date-fns, moment, react-dropzone, xlsx, etc.
 
 ---
 
 ## 🗂️ Estrutura | Structure
+
 ```
-electron_url_container/
-├── index.html
-├── main.js
+facce_id_web/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   ├── style.css
+│   ├── Components/
+│   ├── Config/
+│   ├── Services/
+│   ├── Util/
+│   ├── Views/
+│   └── ...
 ├── package.json
-├── package-lock.json
-├── preload.js
-├── url.txt
-└── README.md
+├── README.md
+└── ...
 ```
 
 ---
@@ -72,13 +92,12 @@ electron_url_container/
    ```bash
    npm install
    ```
-3. **Crie o arquivo de URL:**
-   - Crie o arquivo `C:\temp\url.txt` com a URL desejada na primeira linha.
+3. **Configure as variáveis de ambiente e backend (se necessário).**
 4. **Inicie o aplicativo:**
    ```bash
    npm start
    ```
-   O app abrirá a URL em modo quiosque.
+   O app estará disponível em `http://localhost:3000`.
 
 **EN:**
 1. **Prerequisites:** Node.js 16+ and npm
@@ -86,13 +105,12 @@ electron_url_container/
    ```bash
    npm install
    ```
-3. **Create the URL file:**
-   - Create the file `C:\temp\url.txt` with the desired URL on the first line.
+3. **Configure environment variables and backend (if needed).**
 4. **Start the app:**
    ```bash
    npm start
    ```
-   The app will open the URL in kiosk mode.
+   The app will be available at `http://localhost:3000`.
 
 ---
 
@@ -129,8 +147,8 @@ Feel free to get in touch for questions, suggestions, or collaborations!
 ---
 
 <div align="center">
-  <b>Feito com 💙 para estudos de Electron, Node.js e aplicações desktop multiplataforma.<br/>
-  Made with 💙 for Electron, Node.js and cross-platform desktop application studies.</b>
+  <b>Feito com 💙 para estudos e aplicações de reconhecimento facial, agendamento e gestão de usuários.<br/>
+  Made with 💙 for facial recognition, scheduling, and user management applications.</b>
 </div>
 
 ---
