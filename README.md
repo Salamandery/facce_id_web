@@ -120,12 +120,12 @@ facce_id_web/
 
 <div align="center">
 
-**Rodolfo M. F. Abreu**
-Desenvolvedor de software apaixonado por tecnologia, aprendizado contínuo e boas práticas de programação. Sempre em busca de novos desafios e oportunidades para colaborar em projetos inovadores.
-
+<p><b>Rodolfo M. F. Abreu</b></p>
+<p>Desenvolvedor de software apaixonado por tecnologia, aprendizado contínuo e boas práticas de programação. Sempre em busca de novos desafios e oportunidades para colaborar em projetos inovadores.</p>
+<br/>
 [![GitHub](https://img.shields.io/badge/GitHub-rodolfomfabreu-black?style=for-the-badge&logo=github)](https://github.com/salamandery)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Rodolfo%20Abreu-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/rodolfo-marques-ferreira-de-abreu/)
-
+<br/>
 Sinta-se à vontade para entrar em contato para dúvidas, sugestões ou colaborações!
 
 </div>
@@ -134,12 +134,12 @@ Sinta-se à vontade para entrar em contato para dúvidas, sugestões ou colabora
 
 <div align="center">
 
-**Rodolfo M. F. Abreu**
-Software developer passionate about technology, continuous learning, and best programming practices. Always looking for new challenges and opportunities to collaborate on innovative projects.
-
+<p><b>Rodolfo M. F. Abreu</b></p>
+<p>Software developer passionate about technology, continuous learning, and best programming practices. Always looking for new challenges and opportunities to collaborate on innovative projects.</p>
+<br/>
 [![GitHub](https://img.shields.io/badge/GitHub-rodolfomfabreu-black?style=for-the-badge&logo=github)](https://github.com/salamandery)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Rodolfo%20Abreu-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/rodolfo-marques-ferreira-de-abreu/)
-
+<br/>
 Feel free to get in touch for questions, suggestions, or collaborations!
 
 </div>
