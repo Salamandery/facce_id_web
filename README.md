@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+# 🌐 URLContainer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-11.1.2-black?style=for-the-badge&logo=next.js"/>
+  <img src="https://img.shields.io/badge/React-17.0.2-61DAFB?style=for-the-badge&logo=react"/>
+  <img src="https://img.shields.io/badge/TypeScript-4.4.3-3178C6?style=for-the-badge&logo=typescript"/>
+  <img src="https://img.shields.io/badge/MUI-5.0.3-007FFF?style=for-the-badge&logo=mui"/>
+  <img src="https://img.shields.io/badge/styled--components-5.3.1-DB7093?style=for-the-badge&logo=styled-components"/>
+  <img src="https://img.shields.io/badge/Axios-0.22.0-5A29E4?style=for-the-badge&logo=axios"/>
+</p>
 
-## Available Scripts
+<div align="center">
+  <b>🇧🇷 Português | <a href="#english-version">🇺🇸 English below</a></b>
+</div>
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📑 Sumário | Table of Contents
+- [Sobre o Projeto | About](#sobre-o-projeto--about)
+- [Tecnologias | Technologies](#tecnologias--technologies)
+- [Estrutura | Structure](#estrutura--structure)
+- [Instalação e Execução | Setup & Run](#instalação-e-execução--setup--run)
+- [Autor | Author](#autor--author)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Sobre o Projeto | About
 
-### `npm test`
+**PT-BR:**
+> Um container Electron que abre uma URL em modo quiosque (fullscreen, sem bordas, sem menu), lendo o endereço do arquivo `C:\temp\url.txt`. Ideal para aplicações de totens, painéis ou navegação restrita.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**EN:**
+> An Electron container that opens a URL in kiosk mode (fullscreen, borderless, no menu), reading the address from the file `C:\temp\url.txt`. Ideal for kiosk, dashboard, or restricted browsing applications.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Tecnologias | Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**PT-BR:**
+- **Este projeto não utiliza Java.**
+- **Electron 15+**: Framework para criar aplicações desktop multiplataforma usando tecnologias web (HTML, CSS, JS).
+- **Node.js 16+**: Ambiente de execução JavaScript para backend e integração com o sistema operacional.
+- **Electron Forge**: Ferramenta para empacotamento, distribuição e scaffolding de projetos Electron.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**EN:**
+- **This project does not use Java.**
+- **Electron 15+**: Framework for building cross-platform desktop applications using web technologies (HTML, CSS, JS).
+- **Node.js 16+**: JavaScript runtime environment for backend and OS integration.
+- **Electron Forge**: Tool for packaging, distribution, and scaffolding of Electron projects.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🗂️ Estrutura | Structure
+```
+electron_url_container/
+├── index.html
+├── main.js
+├── package.json
+├── package-lock.json
+├── preload.js
+├── url.txt
+└── README.md
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## ⚙️ Instalação e Execução | Setup & Run
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**PT-BR:**
+1. **Pré-requisitos:** Node.js 16+ e npm
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+3. **Crie o arquivo de URL:**
+   - Crie o arquivo `C:\temp\url.txt` com a URL desejada na primeira linha.
+4. **Inicie o aplicativo:**
+   ```bash
+   npm start
+   ```
+   O app abrirá a URL em modo quiosque.
 
-## Learn More
+**EN:**
+1. **Prerequisites:** Node.js 16+ and npm
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Create the URL file:**
+   - Create the file `C:\temp\url.txt` with the desired URL on the first line.
+4. **Start the app:**
+   ```bash
+   npm start
+   ```
+   The app will open the URL in kiosk mode.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👨‍💻 Autor | Author
 
-### Code Splitting
+**PT-BR:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<div align="center">
 
-### Analyzing the Bundle Size
+**Rodolfo M. F. Abreu**
+Desenvolvedor de software apaixonado por tecnologia, aprendizado contínuo e boas práticas de programação. Sempre em busca de novos desafios e oportunidades para colaborar em projetos inovadores.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[![GitHub](https://img.shields.io/badge/GitHub-rodolfomfabreu-black?style=for-the-badge&logo=github)](https://github.com/salamandery)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Rodolfo%20Abreu-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/rodolfo-marques-ferreira-de-abreu/)
 
-### Making a Progressive Web App
+Sinta-se à vontade para entrar em contato para dúvidas, sugestões ou colaborações!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+</div>
 
-### Advanced Configuration
+**EN:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<div align="center">
 
-### Deployment
+**Rodolfo M. F. Abreu**
+Software developer passionate about technology, continuous learning, and best programming practices. Always looking for new challenges and opportunities to collaborate on innovative projects.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[![GitHub](https://img.shields.io/badge/GitHub-rodolfomfabreu-black?style=for-the-badge&logo=github)](https://github.com/salamandery)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Rodolfo%20Abreu-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/rodolfo-marques-ferreira-de-abreu/)
 
-### `npm run build` fails to minify
+Feel free to get in touch for questions, suggestions, or collaborations!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</div>
+
+---
+
+<div align="center">
+  <b>Feito com 💙 para estudos de Electron, Node.js e aplicações desktop multiplataforma.<br/>
+  Made with 💙 for Electron, Node.js and cross-platform desktop application studies.</b>
+</div>
+
+---
+
+<div align="center" id="english-version">
+  <b>🇺🇸 English version above | <a href="#top">🇧🇷 Versão em português acima</a></b>
+</div>
